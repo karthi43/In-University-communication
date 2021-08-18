@@ -1,0 +1,172 @@
+import * as React from 'react';
+ import {View , Button, StyleSheet,Text,TextInput,ImageBackground ,Image ,TouchableOpacity, StatusBar, ScrollView, Alert} from 'react-native';
+ import { NavigationContainer } from '@react-navigation/native';
+ import { createStackNavigator } from '@react-navigation/stack';
+ import { MaterialCommunityIcons } from '@expo/vector-icons';
+ import { Linking} from 'react-native';
+ //import { SocialIcon } from 'react-native-elements';
+ const Separator = () => (
+   <View style={styles.separator} />
+ );
+
+ export default function App({navigation}) {
+     return (
+ <View style={styles.container}>
+       <Image
+              source={require('./assets/AVATHAR.jpg')}
+              style={{ height:200,width:200,justifyContent: 'center', borderRadius:200}}
+            />
+        <Text style={styles.index}>USER NAME</Text>
+        <Text style={styles.index}>Email-id</Text>
+        <Text style={styles.index}>Roll No</Text>
+        <Text style={styles.index}>Phone</Text>
+        <Text style={styles.index}>Address</Text>
+        <Text style={styles.index}>Password</Text>
+            <StatusBar style="auto" />
+            <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("Index")}>
+         <Text style={{fontSize: 25,
+             justifyContent: "center",
+             fontWeight:"bold",
+         color: '#03A9F4',
+         margin:10,}}>LOG OUT</Text>
+         </TouchableOpacity>
+            
+    </View> 
+   );
+ }
+
+
+
+const styles = StyleSheet.create({
+         mcontainer: {
+           flex:1,
+           backgroundColor: 'white',
+          //marginTop:30,
+           padding:5,
+           //justifyContent:"center"
+         }, 
+             leftContainer: {
+               flex: 1,
+               //margin:1,
+               flexDirection:"column",
+               justifyContent: "center",
+               //alignItems:'flex-start',
+               
+             },
+             rightContainer: {
+               flex: 1,
+               //margin:1,
+               flexDirection:"row",//justifyContent:"center",
+               alignItems:"center",
+               
+             },
+             ImageIconStyle: {
+               margin: 5,
+               height:70,
+               width: 70,
+               borderRadius:100,
+               borderColor:"green",
+               borderWidth:0.5
+             },
+             propic:{
+               padding: 2,
+               margin: 10,
+               height:200,
+               width: 200,
+               borderRadius:100,
+               borderColor:"black",
+               borderWidth:0.5,
+               alignSelf:"center",
+             },
+             name:{
+               fontSize:15,
+               //fontWeight:'bold',
+               color:'black',
+               padding:10,
+               alignSelf:"center",
+             },
+             number:{
+               fontSize:18,
+               fontWeight:'bold',
+               color:'#1D8348',
+               padding:10,
+               marginLeft:90,
+               alignSelf:"auto",
+               borderColor:"#1D8348",
+               borderRadius:200,
+               borderWidth:0.5
+        },
+        smsg:{
+         fontSize:25,
+         fontWeight:'bold', 
+             paddingLeft:10,
+             margin:10,
+             color:"#51B467",
+        },
+        rmsg:{
+         fontSize:25,
+         fontWeight:'bold',     
+             paddingLeft:10,
+             margin:10,
+             color:"black",
+        },
+        Time:{
+         fontSize:10,
+         alignSelf:"center",     
+             margin:10,
+             color:"black",
+        },
+        details:{
+         fontSize:20,
+         color:'black',
+         padding:10,
+         alignSelf:"center",
+        },
+         container:{
+           flex: 1,
+           backgroundColor:"white",
+           alignItems: 'center',
+           justifyContent:"center",
+   },
+   index: {
+    fontSize: 15,
+        justifyContent: "center",
+        alignSelf:'center',
+        fontWeight:"bold",
+    color: 'black',
+    margin:10,
+     },
+     homecontainer: {
+       flex: 1,
+       alignItems: 'center',
+       backgroundColor:"white"
+     }, 
+     homestyle: {
+         //marginTop:2,
+         flex: 1,
+         //backgroundColor: 'white',
+         
+       },
+       headerstyle: {
+         backgroundColor:'#1BD8A9',
+         justifyContent : 'center',
+         width: '100%',
+   
+       },
+       icons:{
+         flex: 1,
+     flexDirection:"row",
+     justifyContent:"center",
+       },
+       separator: {
+         
+         borderBottomWidth:0.5,
+         borderBottomColor: '#1D8348',
+         margin:5,
+         
+       },         
+ });
+       
+         
+     
+      

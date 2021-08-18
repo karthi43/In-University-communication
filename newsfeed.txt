@@ -1,0 +1,445 @@
+    return (
+   <ImageBackground 
+        source={require('./assets/bg.jpg')}
+        style={{width: "100%", height: "100%" }}>
+            <View style={styles.container}>
+            <Text style={{fontSize: 34,  marginTop:32, alignSelf: "center" , fontFamily: "TIMESNEWROMAN"}}>EASY CHAT</Text>
+            <View style={styles.Bcontainer}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("chat")}> 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop: "32"}}>Messages</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("contacts")}> 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop:"32" }  }>Contacts</Text>
+                </TouchableOpacity>
+                
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("profile")}> 
+                <Text style={{ color: "#FFF", fontWeight: "500"}}>Profile</Text>
+                </TouchableOpacity>
+                </View>
+            <ScrollView horizontal={true} >
+            <View style={styles.Bcontainer}>
+            
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://cdn5.vectorstock.com/i/1000x1000/88/69/user-sign-purple-gradient-vector-15218869.jpg' }} 
+            style={styles.simage}
+          />
+          <Text style={{fontSize:18, alignSelf:"center" }}>Liam</Text>
+                </TouchableOpacity>
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://st4.depositphotos.com/5723202/23986/v/1600/depositphotos_239866106-stock-illustration-solid-purple-gradient-user-icon.jpg' }} 
+            style={styles.simage}
+          />
+          
+          
+          <Text style={{fontSize:18, alignSelf:"center" }}>Noah</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://b1.pngbarn.com/png/970/748/flat-gradient-half-round-user-icon-png-clip-art-thumbnail.png' }} 
+            style={styles.simage}
+          />
+          
+          
+          <Text style={{fontSize:18, alignSelf:"center" }}>William</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://cdn5.vectorstock.com/i/1000x1000/01/69/businesswoman-character-avatar-icon-vector-12800169.jpg' }} 
+            style={styles.simage}
+          />
+          <Text style={{fontSize:18, alignSelf:"center" }}>Emma</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://st4.depositphotos.com/1915171/27913/v/950/depositphotos_279134028-stock-illustration-checked-user-icon-profile-avatar.jpg' }} 
+            style={styles.simage}
+          />
+          
+          
+          <Text style={{fontSize:18, alignSelf:"center" }}>James</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://thumbs.dreamstime.com/b/social-avatar-stories-gradient-frame-instastory-user-image-profile-117578721.jpg' }} 
+            style={styles.simage}
+          />
+          
+          <Text style={{fontSize:18, alignSelf:"center" }}>Clay</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQHUndSzxcF1UbSXX3bVILVaUbSIhoc_GEA8g&usqp=CAU' }} 
+            style={styles.simage}
+          />
+          <Text style={{fontSize:18, alignSelf:"center" }}>Lucus</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://st4.depositphotos.com/1915171/25614/v/950/depositphotos_256145136-stock-illustration-user-support-line-icon-female.jpg' }} 
+            style={styles.simage}
+          />
+          
+          <Text style={{fontSize:18, alignSelf:"center" }}>Bella</Text>
+                </TouchableOpacity>
+                
+                
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX35963404.jpg' }} 
+            style={styles.simage}
+          />
+         
+         <Text style={{fontSize:18, alignSelf:"center" }}>Henry</Text>
+                </TouchableOpacity>
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSoNDBvZWBh1X1ZU0TrIZq2x7O9IBFHUYClVQ&usqp=CAU' }} 
+            style={styles.simage}
+          />
+          <Text style={{fontSize:18, alignSelf:"center" }}>Jackson</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity > 
+                <Image source={{ uri: 'https://st4.depositphotos.com/1915171/25070/v/1600/depositphotos_250703554-stock-illustration-user-icon-couple-group-sign.jpg' }} 
+            style={styles.simage}
+          />
+          
+          
+          <Text style={{fontSize:18, alignSelf:"center" }}>Jack</Text>
+          
+                </TouchableOpacity>
+                
+                
+                  </View>
+                  </ScrollView>
+
+                    
+                <Separator />
+                <Text style={{fontSize: 24, marginTop: "20",alignSelf: "center"}}>NEWS FEED</Text>
+                <Separator />
+                <ScrollView > 
+                <Image  
+      style={{ width: 700, height:300, align: "center" , borderWidth: 2, borderColor: "black", alignSelf: "center", marginTop: "40"}}
+      source={require('./assets/download.jpg')}
+         /> 
+             <View style={styles.Bcontainer}>
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop: "32"}}>LIKE</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop:"32" }  }>Comment</Text>
+                </TouchableOpacity>
+                
+          <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500"}}>Share</Text>
+                </TouchableOpacity>
+                </View>
+
+                <Image  
+      style={{ width: 700, height:300, align: "center" , alignSelf: "center", marginTop: "40", borderWidth: 2, borderColor: "black"}}
+      source={require('./assets/920267.jpg')}
+         /> 
+             <View style={styles.Bcontainer}>
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop: "32"}}>LIKE</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop:"32" }  }>Comment</Text>
+                </TouchableOpacity>
+                
+          <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500"}}>Share</Text>
+                </TouchableOpacity>
+                </View>
+                <Image  
+      style={{ width: 700, height:300, align: "center" , borderWidth: 2, borderColor: "black",alignSelf: "center", marginTop: "40"}}
+      source={require('./assets/children.jpg')}
+         /> 
+             <View style={styles.Bcontainer}>
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop: "32"}}>LIKE</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop:"32" }  }>Comment</Text>
+                </TouchableOpacity>
+                
+          <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500"}}>Share</Text>
+                </TouchableOpacity>
+                </View>
+                <Image  
+      style={{ width: 700, height:300, borderWidth: 2, borderColor: "black",align: "center" , alignSelf: "center", marginTop: "40"}}
+      source={require('./assets/avg.jpg')}
+         /> 
+             <View style={styles.Bcontainer}>
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop: "32"}}>LIKE</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop:"32" }  }>Comment</Text>
+                </TouchableOpacity>
+                
+          <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500"}}>Share</Text>
+                </TouchableOpacity>
+                </View>
+                <Image  
+      style={{ width: 700, height:300, align: "center" , borderWidth: 2, borderColor: "black",alignSelf: "center", marginTop: "40"}}
+      source={require('./assets/1.jpg')}
+         /> 
+             <View style={styles.Bcontainer}>
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop: "32"}}>LIKE</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop:"32" }  }>Comment</Text>
+                </TouchableOpacity>
+                
+          <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500"}}>Share</Text>
+                </TouchableOpacity>
+                </View>
+                <Image  
+      style={{ width: 700, height:300, align: "center" , borderWidth: 2, borderColor: "black",alignSelf: "center", marginTop: "40"}}
+      source={require('./assets/2.jpg')}
+         /> 
+             <View style={styles.Bcontainer}>
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop: "32"}}>LIKE</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop:"32" }  }>Comment</Text>
+                </TouchableOpacity>
+                
+          <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500"}}>Share</Text>
+                </TouchableOpacity>
+                </View>
+                <Image  
+      style={{ width: 700, height:300, align: "center" , borderWidth: 2, borderColor: "black",alignSelf: "center", marginTop: "40"}}
+      source={require('./assets/3.jpg')}
+         /> 
+             <View style={styles.Bcontainer}>
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop: "32"}}>LIKE</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop:"32" }  }>Comment</Text>
+                </TouchableOpacity>
+                
+          <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500"}}>Share</Text>
+                </TouchableOpacity>
+                </View>
+                <Image  
+      style={{ width: 700, height:300, align: "center" , borderWidth: 2, borderColor: "black",alignSelf: "center", marginTop: "40"}}
+      source={require('./assets/4.jpg')}
+         /> 
+             <View style={styles.Bcontainer}>
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop: "32"}}>LIKE</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500", marginTop:"32" }  }>Comment</Text>
+                </TouchableOpacity>
+                
+          <TouchableOpacity style={styles.Nbutton} > 
+                <Text style={{ color: "#FFF", fontWeight: "500"}}>Share</Text>
+                </TouchableOpacity>
+                </View>
+          </ScrollView> 
+       
+            </View>    
+            </ImageBackground>
+        );
+
+
+
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 0.1,
+    justifycontent: "center",
+    aligItems: "center",
+    alignSelf: "center"
+
+},
+Nbutton:
+{
+
+  backgroundColor: "#E9446A",
+borderRadius: 100,
+width: 100,
+alignSelf: "center",
+height: 60,
+alignItems: "center",
+margin: 20,
+justifyContent: "center"
+
+},
+Bcontainer: {
+  flex: 1,
+  flexDirection:"row",
+  justifyContent:"center",
+
+},
+input: {
+  borderBottomColor: "#8A8F9E",
+  borderBottomwidth: "styleSheet.hairlineWidth",
+  height: 40,
+  borderWidth :1,
+  fontSize: 15,
+  color: "161F3D"
+},
+greeting:{
+    marginTop:32,
+    fontsize: 20,
+    fontweight:"400",
+    textAlign: "center"
+},
+errorMessage:{
+height:72,
+alignItems: "center",
+justifyContent: "center",
+marginHorizontal: 30
+},
+error:{
+    color: "#E9446A",
+    fontSize: 13,
+    fontWeight: "600",
+    textAlign: "center"
+},
+form:{
+    marginBottom: 48,
+    marginHorizontal: 30
+},
+inputTitle:{
+   justifyContent: "center",
+    color: "#8A8F9E",
+    fontSize: 20,
+    alignItems: "center",
+    textTransform: "uppercase"
+},
+
+button:{
+    marginHorizontal: 40,
+        backgroundColor: "#D81B60",
+    borderRadius: 10,
+    width: 300,
+    alignSelf: "center",
+    height: 60,
+    alignItems: "center",
+    margin: 10,
+    justifyContent: "center"
+},
+  
+
+      separator: {
+        marginVertical: 5,
+        borderBottomColor: 'black',
+        borderBottomWidth: StyleSheet.hairlineWidth,
+      },  
+      logo: {
+        width: 500,
+        height: 250,
+        margin: 20,
+        alignSelf:"center"
+      },
+          leftContainer: {
+            flex: 1,
+            //margin:1,
+            flexDirection:"column",
+            justifyContent: "center",
+            //alignItems:'flex-start',
+            
+          },
+          rightContainer: {
+            flex: 1,
+            //margin:1,
+            flexDirection:"row",
+            //justifyContent:"center",
+            alignItems:"center",
+            
+          },
+          ImageIconStyle: {
+            padding: 2,
+            margin: 10,
+            height:70,
+            width: 70,
+            borderRadius:100,
+            borderColor:"#E9446A",
+            borderWidth:0.5
+          },
+          simage: {
+            padding: 2,
+            margin: 10,
+            height:100,
+            width: 100,
+            borderRadius:100,
+            borderColor:"black",
+            borderWidth:0.5
+          },
+          propic:{
+            padding: 2,
+            margin: 10,
+            height:200,
+            width: 200,
+            borderRadius:100,
+            borderColor:"white",
+            borderWidth:0.5,
+            alignSelf:"center",
+          },
+          name:{
+            fontSize:15,
+            color:'#E9446A',
+            padding:10,
+            alignSelf:"center",
+          },
+          number:{
+            fontSize:18,
+            fontWeight:'bold',
+            color:'#E9446A',
+            padding:10,
+            marginLeft:90,
+            alignSelf:"center",
+            borderColor:"#E9446A",
+            borderRadius:500,
+            borderWidth:0.5
+     },
+     smsg:{
+      fontSize:25,
+      fontWeight:'bold', 
+          paddingLeft:10,
+          margin:10,
+          color:"#D81B60",
+     },
+     rmsg:{
+      fontSize:25,
+      fontWeight:'bold',     
+          paddingLeft:10,
+          margin:10,
+          color:"black",
+     },
+     Time:{
+      fontSize:10,
+      alignSelf:"center",     
+          margin:10,
+          color:"grey",
+     },
+     details:{
+      fontSize:30,
+      color:'black',
+      padding:10,
+      alignSelf:"center",
+     },
+    
+
+});

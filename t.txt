@@ -1,0 +1,535 @@
+import * as React from 'react';
+import {View , Button, StyleSheet,Text,TextInput,ImageBackground ,Image ,TouchableOpacity, StatusBar, ScrollView, Alert} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Linking} from 'react-native';
+const Separator = () => (
+  <View style={styles.separator} />
+);
+
+
+
+function Index({ navigation }) {
+  return (
+   
+    <View style={styles.container}> 
+    <StatusBar style="auto" />
+     <Image source={{ uri: 'https://image.freepik.com/free-vector/cute-owl-with-scarf-books_23-2147616937.jpg' }}
+     style={{ height:300,width:300,justifyContent: 'center', borderRadius:300}}  />
+      <Text style={styles.index}>BookBird</Text>          
+    <View style={styles.rightcontainer}>
+   
+   <TextInput placeholder='email id--@klh.edu.in' placeholderTextColor='#12635B'
+ style={{ height:50,width:300,borderColor: '#12635B', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1}} />
+ 
+       <TextInput placeholder="Password" placeholderTextColor="#12635B"
+      returnKeyType='go'
+       secureTextEntry autoCorrect={false}
+           style={{height:50,width:300,borderColor: '#12635B', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1}}
+           />
+        <Button
+  color='#1CD8C3'
+  headingText = '10'
+  width = '1000'
+  
+        title="LOGIN"  onPress={() => navigation.navigate('Home')} />
+     <Button
+        color='#51B467'
+        title="signup"  
+        onPress={() => navigation.navigate('Signup')}/>
+    </View>
+</View>  
+     
+  );
+}
+function Signup({ navigation }){
+  return (
+    <View style={styles.container}>
+      <Text style={styles.index}>Book Bird</Text>
+ <TextInput placeholder='First name ' placeholderTextColor='#12635B'
+ style={{height:50,width:300,borderColor: '#12635B', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1,alignSelf:"center"}} />
+ <TextInput placeholder='Last name  ' placeholderTextColor='#12635B'
+ style={{height:50,width:300,borderColor: '#12635B', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1,alignSelf:"center"}} />
+ <TextInput placeholder='ID' placeholderTextColor='#12635B'
+ style={{height:50,width:300,borderColor: '#12635B', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1,alignSelf:"center"}} />
+ <TextInput placeholder='Email Id--@klh.edu.in' placeholderTextColor='#12635B'
+ style={{height:50,width:300,borderColor: '#12635B', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1,alignSelf:"center"}} />
+  <TextInput placeholder='Phone number' placeholderTextColor='#12635B'
+ style={{height:50,width:300,borderColor: '#12635B', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1,alignSelf:"center"}} />
+  <TextInput placeholder='Your Designation' placeholderTextColor='#12635B'
+ style={{height:50,width:300,borderColor: '#12635B', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1,alignSelf:"center"}} />
+ <TextInput placeholder='Password' placeholderTextColor='#12635B'
+ returnKeyType='go'
+ secureTextEntry 
+ autoCorrect={false}
+ style={{height:50,width:300,borderColor: '#12635B', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1,alignSelf:"center"}} />
+         <View style={styles.rightcontainer}>
+      <Button
+        color='#51B467'
+        title="Submit"  onPress={() => navigation.navigate('otp')}/>
+
+      <TouchableOpacity activeOpacity={0.5}
+        onPress={() => navigation.navigate('Home')}>
+          <Text style={styles.index}>Already a user?</Text>
+      </TouchableOpacity>
+     </View>
+     </View>
+
+
+  );
+}
+function otp({navigation}){
+ 
+ 
+  return (
+     <View style={styles.container}> 
+       <Text style={styles.index}>BookBird</Text>
+        <Text style={styles.index}>Confirmation of Email</Text>
+        <TextInput placeholder='OTP' placeholderTextColor='#12635B'
+       style={{ height:50,width:300,borderColor: '#12635B', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1}} />
+          <Button
+         color='#51B467'
+         title="Submit"  onPress={() => navigation.navigate('Home')}/>
+        <TouchableOpacity 
+          activeOpacity={0.5}
+           onPress={() => navigation.navigate('otp')}><Text style={{fontSize: 25,
+            justifyContent: "center",
+            fontWeight:"bold",
+        color: '#03A9F4',
+        margin:10,}}>verify with phone</Text></TouchableOpacity>
+
+     </View>
+  );
+}
+function Home({navigation}){
+
+ return (
+   <View style={styles.homecontainer}>
+      <View style={styles.headerstyle}>
+       <TouchableOpacity activeOpacity={0.5}
+   onPress={() => navigation.navigate('About')}>
+        <Text  style={{fontSize: 25,
+            justifyContent: "center",
+            fontWeight:"bold",
+        color: 'black',
+        alignSelf:"center",
+        marginBottom:20,}}>BookBird</Text></TouchableOpacity>
+      </View>
+      <ScrollView>
+      <TouchableOpacity activeOpacity={0.5} onPress={() => {Linking.openURL('https://www.codechef.com/'); }}>
+   <Text style={{ fontSize:30, fontWeight:'bold',padding:20,alignSelf:"center",color:'white'}}>
+        Codechef ALERT!</Text>
+        <Text style={{ fontSize:15, alignSelf:"center",color:'white'}}>Challenge will start on dd/mm/yyyy </Text>
+        </TouchableOpacity>
+     <TouchableOpacity activeOpacity={0.5} onPress={() => {Linking.openURL('https://www.hackerearth.com'); }}>
+     <Text style={{ fontSize:30, fontWeight:'bold',padding:20,alignSelf:"center",color:'white'}}>HackerEarth ALERT!</Text>
+        <Text style={{ fontSize:15, alignSelf:"center",color:'white'}}>Challenge will start on dd/mm/yyyy </Text>
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => {Linking.openURL('https://www.hackerrank.com/'); }}>
+     <Text style={{ fontSize:30, fontWeight:'bold',padding:20,alignSelf:"center",color:'white'}}>Hackerrank ALERT!</Text>
+        <Text style={{ fontSize:15, alignSelf:"center",color:'white'}}>Challenge will start on dd/mm/yyyy </Text>
+        </TouchableOpacity>
+        </ScrollView>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("profile")}>
+        <Text style={{fontSize: 25,
+            justifyContent: "center",
+            fontWeight:"bold",
+        color: '#03A9F4',
+        marginBottom:20,}}>PROFILE</Text>
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("chatbox")}>
+        <Text style={{fontSize: 25,
+            justifyContent: "center",
+            fontWeight:"bold",
+        color: '#03A9F4',
+        marginBottom:20,}}>CHAT</Text>
+        </TouchableOpacity>
+   </View>
+ );
+}
+function About({navigation}){
+  return (
+   
+    <View style={styles.container}>
+       <Text style={styles.index}>About CMS</Text>
+       <Text style={styles.index}>CMS ( Collage management system )  CMS makes User's work faster and easier to manage your organization related work 
+        </Text>
+           <StatusBar style="auto" /> 
+   </View>  
+
+      
+    
+  );
+}
+function chatbox({navigation}){
+  return (
+   
+    <View style={styles.container}> 
+     <TouchableOpacity  activeOpacity={0.5} onPress={() => Alert.alert('CONNECTED')}>
+    <Text style={styles.index}>Connect to Contacts</Text> 
+    </TouchableOpacity>  
+    <Separator /> 
+    <ScrollView>
+      <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("Sithara")}>
+    <View style={styles.leftContainer}>
+    <View style={styles.rightContainer}>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("contactdetails")}  >
+             <Image source={require('./assets/AVATHAR.jpg')} 
+            style={styles.ImageIconStyle}
+          />
+        </TouchableOpacity>
+        <Text style={styles.name}>Sithara {"\n"}Hello</Text>
+        <Text style={styles.number}></Text>
+        </View>
+        </View>
+        </TouchableOpacity>
+        <Separator />
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("message")}>
+        <View style={styles.leftContainer}>
+    <View style={styles.rightContainer}>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("contactdetails")} >
+             <Image source={require('./assets/AVATHAR.jpg')} 
+            style={styles.ImageIconStyle}
+          />
+        </TouchableOpacity>
+        <Text style={styles.name}>@Name {"\n"}New Message:Time</Text>
+        <Text style={styles.number}>1+</Text>
+        </View>
+        </View>
+        </TouchableOpacity>
+        <Separator />
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("message")}>
+        <View style={styles.leftContainer}>
+    <View style={styles.rightContainer}>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("contactdetails")} >
+             <Image source={require('./assets/AVATHAR.jpg')} 
+            style={styles.ImageIconStyle}
+          />
+        </TouchableOpacity>
+        <Text style={styles.name}>@Name {"\n"}New Message:Time</Text>
+        <Text style={styles.number}>3+</Text>
+        </View>
+        </View>
+        </TouchableOpacity>
+        <Separator />
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("message")}>
+        <View style={styles.leftContainer}>
+    <View style={styles.rightContainer}>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("contactdetails")}>
+             <Image source={require('./assets/AVATHAR.jpg')} 
+            style={styles.ImageIconStyle}
+          />
+        </TouchableOpacity>
+        <Text style={styles.name}>@Name {"\n"}New Message:Time</Text>
+        <Text style={styles.number}>:)</Text>
+        </View>
+        </View>
+        </TouchableOpacity>
+        <Separator />
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("message")}>
+        <View style={styles.leftContainer}>
+    <View style={styles.rightContainer}>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("contactdetails")}>
+             <Image source={require('./assets/AVATHAR.jpg')} 
+            style={styles.ImageIconStyle}
+          />
+        </TouchableOpacity>
+        <Text style={styles.name}>@Name {"\n"}New Message:Time</Text>
+        <Text style={styles.number}>:(</Text>
+        </View>
+        </View>
+        </TouchableOpacity>
+        <Separator />
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("message")}>
+        <View style={styles.leftContainer}>
+    <View style={styles.rightContainer}>
+        <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("contactdetails")}>
+             <Image source={require('./assets/AVATHAR.jpg')} 
+            style={styles.ImageIconStyle}
+          />
+        </TouchableOpacity>
+        <Text style={styles.name}>@Name {"\n"}New Message:Time</Text>
+        <Text style={styles.number}>:)</Text>
+        </View>
+        </View>
+        </TouchableOpacity>
+
+        
+    </ScrollView>
+</View>  
+      
+    
+  );
+}
+function profile({navigation}){
+  return (
+   
+    <View style={styles.container}>
+      <Image
+             source={{ uri: 'https://images.unsplash.com/photo-1502791451862-7bd8c1df43a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60' }}
+             style={{ height:200,width:200,justifyContent: 'center', borderRadius:200}}
+           />
+       <Text style={styles.index}>USER NAME</Text>
+       <Text style={styles.index}>Email-id</Text>
+       <Text style={styles.index}>Roll No</Text>
+       <Text style={styles.index}>Phone</Text>
+       <Text style={styles.index}>Address</Text>
+       <Text style={styles.index}>Password</Text>
+           <StatusBar style="auto" />
+           <TouchableOpacity activeOpacity={0.5} onPress={() => navigation.navigate("Index")}>
+        <Text style={{fontSize: 25,
+            justifyContent: "center",
+            fontWeight:"bold",
+        color: '#03A9F4',
+        margin:10,}}>LOG OUT</Text>
+        </TouchableOpacity>
+           
+   </View>  
+
+      
+    
+  );
+}
+function message ({navigation}){
+  return(
+    <View style={styles.mcontainer}>
+      <ScrollView>
+      <Text style={styles.Time}>17-SEP--4:50pm</Text>
+      <Text style={styles.smsg}>Hello</Text>
+      <Text style={styles.rmsg}>Hello</Text>
+      <Text style={styles.smsg}>wassup?</Text>
+      <Text style={styles.rmsg}>nothing much</Text>
+      <Text style={styles.smsg}>How is ur collge?</Text>
+      <Text style={styles.rmsg}>gud bro! :)</Text>
+      <Text style={styles.smsg}>ate?</Text>
+      <Text style={styles.rmsg}>yes bro.. wau?</Text>
+      <Text style={styles.smsg}>just now..</Text>
+      <Text style={styles.rmsg}>bye..</Text>
+      <Text style={styles.Time}>22-SEP--00:00pm</Text>
+      <Text style={styles.smsg}>Bro.. Happy Birthday</Text>
+      <Text style={styles.rmsg}>Thanks bro</Text>
+      </ScrollView>
+    <TextInput placeholder='send message' placeholderTextColor="white" style={{display: "flex", height: 50,
+   borderColor: 'white', borderWidth: 5,paddingLeft:10,margin:10,borderRadius:20,borderWidth:1,color:"white", alignSelf:"stretch"}} />
+  </View>
+  );
+}
+function contactdetails(){
+  return(
+    <View style={styles.container}> 
+  <Image source={{ uri: 'https://www.pngfind.com/pngs/m/470-4703547_icon-user-icon-hd-png-download.png' }} 
+            style={styles.propic}
+          />
+          <Text style={styles.details}>@Name</Text>
+          <Text style={styles.details}>Phone Number</Text>
+          <Text style={styles.details}>Messages</Text>
+          <Text style={styles.details}>Recents</Text>
+          </View>
+          );
+}
+function Sithara({navigation}){
+  const steps = [
+    {
+      id: '0',
+      message: 'Welcome to react chatbot!',
+      trigger: '1',
+    },
+    {
+      id: '1',
+      user: true,
+      trigger: '2',
+    },
+    {
+      id: '2',
+      message: 'hello sir',
+      trigger: '3',
+    },
+    {
+      id: '3',
+      user: true,
+      trigger: '4',
+    },
+    {
+      id: '4',
+      message: 'what can I do for you?',
+      trigger: '5',
+    },
+    {
+      id: '5',
+      user: true,
+      trigger: '6',
+    },
+    {
+      id: '6',
+      message: 'sure, It is located In India, Telangana state!',
+      trigger: '7',
+    },
+    {
+      id: '7',
+      user: true,
+      trigger: '8',
+    },
+    {
+      id: '8',
+      message: 'Thank you have a nice day!',
+      end: true,
+    },
+   
+  ];
+
+  return(
+    <View>
+
+       <ChatBot steps={steps} />
+     </View>
+  )
+}
+
+const Stack = createStackNavigator();
+function MyTabs() {
+        return (
+          <NavigationContainer>
+            <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: "black" },
+        headerTintColor: "white",
+        headerBackTitle: "Back",
+        marginTop:5
+      }}>
+              <Stack.Screen options={{headerShown: false}} name="Index" component={Index} />
+              <Stack.Screen options={{headerShown: false}} name="Signup" component={Signup} />
+              <Stack.Screen options={{headerShown: false}} name="Home" component={Home} />   
+              <Stack.Screen  name="About" component={About} />  
+              <Stack.Screen  name="otp" component={otp} />
+              <Stack.Screen  name="chatbox" component={chatbox} />   
+              <Stack.Screen  name="profile" component={profile} />   
+              <Stack.Screen name="message" component={message} />
+              <Stack.Screen  name="contactdetails" component={contactdetails} />  
+              <Stack.Screen name="Sithara"  component={Sithara} />            
+            </Stack.Navigator>
+          </NavigationContainer>
+        );
+      }
+
+      const styles = StyleSheet.create({
+        mcontainer: {
+          flex:1,
+          backgroundColor: 'black',
+         //marginTop:30,
+          padding:5,
+          fontSize:25,
+          //justifyContent:"center"
+        }, 
+            leftContainer: {
+              flex: 1,
+              //margin:1,
+              flexDirection:"column",
+              justifyContent: "center",
+              //alignItems:'flex-start',
+              
+            },
+            rightContainer: {
+              flex: 1,
+              //margin:1,
+              flexDirection:"row",
+              //justifyContent:"center",
+              alignItems:"center",
+              
+            },
+            ImageIconStyle: {
+              margin: 5,
+              height:70,
+              width: 70,
+              borderRadius:100,
+              borderColor:"green",
+              borderWidth:0.5
+            },
+            propic:{
+              padding: 2,
+              margin: 10,
+              height:200,
+              width: 200,
+              borderRadius:100,
+              borderColor:"white",
+              borderWidth:0.5,
+              alignSelf:"center",
+            },
+            name:{
+              fontSize:15,
+              //fontWeight:'bold',
+              color:'white',
+              padding:10,
+              alignSelf:"center",
+            },
+            number:{
+              fontSize:18,
+              fontWeight:'bold',
+              color:'#33FF00',
+              padding:10,
+              marginLeft:90,
+              alignSelf:"auto",
+              borderColor:"#33FF00",
+              borderRadius:500,
+              borderWidth:0.5
+       },
+       smsg:{
+        fontSize:25,
+        fontWeight:'bold', 
+            paddingLeft:10,
+            margin:10,
+            color:"#33FF00",
+       },
+       rmsg:{
+        fontSize:25,
+        fontWeight:'bold',     
+            paddingLeft:10,
+            margin:10,
+            color:"white",
+       },
+       Time:{
+        fontSize:10,
+        alignSelf:"center",     
+            margin:10,
+            color:"white",
+       },
+       details:{
+        fontSize:30,
+        color:'white',
+        padding:10,
+        alignSelf:"center",
+       },
+        container:{
+          flex: 1,
+          backgroundColor:"black",
+          alignItems: 'center',
+          justifyContent:"center",
+  },
+  index: {
+   fontSize: 25,
+       justifyContent: "center",
+       alignSelf:'center',
+       fontWeight:"bold",
+   color: 'white',
+   margin:10,
+    },
+    homecontainer: {
+      flex: 1,
+      alignItems: 'center',
+      backgroundColor:"black"
+    },
+    headerstyle: {
+      width:"100%",
+      height:100,
+      backgroundColor:'#1BD8A9',
+      justifyContent : "center",
+      alignSelf:"center"
+    },
+    separator: {
+      marginVertical: 5,
+      borderBottomColor: '#1BD8A9',
+      borderBottomWidth: StyleSheet.hairlineWidth,
+    },           
+});
+      
+        
+    
+      export default MyTabs;
+
